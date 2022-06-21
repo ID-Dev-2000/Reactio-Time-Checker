@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Time</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Universal Link to send user back to github repositories -->
+    <div style="position: absolute; width:20px; height: 20px; background-color: black; z-index: 10; top: 0px; left: 0px;">
+    <a href="https://github.com/ID-Dev-2000" style="color: white;"><-</a></div>
+    
+    <main>
+        <h1>Reaction Time</h1>
+        <p>Click "Test Speed". Box turns blue. Click box when it turns red.</p>
+        <div class="reactionSpeedParent">
+            <div class="speedBox" id="speedBox"></div>
+        </div>
+        <button id="testButton" style="margin-top: 5px;">Test Speed</button>
+        <hr style="width: 100px; margin-top: 10px; margin-bottom: 0px;">
+        <p>Reaction Speed: <span id="resultDisplay">N/A</span> ms</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
