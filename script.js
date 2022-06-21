@@ -12,11 +12,12 @@ function speedBoxEventListener() {
     speedBox.style.backgroundColor = 'White'
     resultDisplay.innerHTML = timeValue2 - timeValue1
     speedBox.removeEventListener('click', speedBoxEventListener)
+    testButton.style.cursor = 'pointer'
     testButton.disabled = false
 }
 
 function handleReactionSpeed() {
-    randomTimeValue = Math.floor(Math.random() * 1200)
+    randomTimeValue = Math.floor(Math.random() * 1500)
     setTimeout(function() {
             timeValue1 = Date.now()
             speedBox.style.backgroundColor = 'Red'
@@ -30,8 +31,9 @@ function handleReactionSpeed() {
 
 testButton.addEventListener('click', function() {
     testButton.disabled = true
+    testButton.style.cursor = 'auto'
     speedBox.style.backgroundColor = 'Blue'
-    setTimeout(handleReactionSpeed, 800)
+    setTimeout(handleReactionSpeed, 500)
 })
 
 console.log(speedBox)
