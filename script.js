@@ -11,22 +11,27 @@ function speedBoxEventListener() {
     timeValue2 = Date.now()
     speedBox.style.backgroundColor = 'White'
     resultDisplay.innerHTML = timeValue2 - timeValue1
+    speedBox.removeEventListener('click', speedBoxEventListener)
+    testButton.disabled = false
 }
 
 function handleReactionSpeed() {
     randomTimeValue = Math.floor(Math.random() * 1200)
     setTimeout(function() {
-        timeValue1 = Date.now()
-        speedBox.style.backgroundColor = 'Red'
-        checkValue++
-        if (checkValue == 1) {
-        speedBox.addEventListener('click', speedBoxEventListener)
-        checkValue = 0
+            timeValue1 = Date.now()
+            speedBox.style.backgroundColor = 'Red'
+            checkValue++
+            if (checkValue == 1) {
+                speedBox.addEventListener('click', speedBoxEventListener)
+                checkValue = 0
         }
     }, randomTimeValue)
 }
 
 testButton.addEventListener('click', function() {
+    testButton.disabled = true
     speedBox.style.backgroundColor = 'Blue'
-    setTimeout(handleReactionSpeed, 400)
+    setTimeout(handleReactionSpeed, 800)
 })
+
+console.log(speedBox)
