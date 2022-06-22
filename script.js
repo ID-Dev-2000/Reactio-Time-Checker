@@ -35,5 +35,3 @@ testButton.addEventListener('click', function() {
     speedBox.style.backgroundColor = 'Blue'
     setTimeout(handleReactionSpeed, 500)
 })
-
-console.log(speedBox)
